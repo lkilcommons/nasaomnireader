@@ -11,7 +11,7 @@ If you need fast OMNI data reading I recommend installing:
 
 2. [Spacepy](https://pypi.python.org/pypi/SpacePy), for it's pyCDF python interface to the NASA CDF Library
 
-If geospacepy-lite does not detect SpacePy on your computer, it will use the NASA OMNIWeb ASCII text files.
+If SpacePy is not on your computer, the package will use the NASA OMNIWeb ASCII text files.
 
 
 ### Installation Instructions ###
