@@ -3,7 +3,7 @@
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-from geospacepy.omnireader import omni_interval
+from nasaomnireader.omnireader import omni_interval
 import datetime
 
 _cadences = ['hourly','5min','1min']

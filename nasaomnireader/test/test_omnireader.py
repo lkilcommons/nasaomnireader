@@ -1,6 +1,6 @@
 # (C) 2020 University of Colorado AES-CCAR-SEDA (Space Environment Data Analysis) Group
 # Written by Liam M. Kilcommons
-from geospacepy import omnireader
+from nasaomnireader import omnireader
 import pytest
 import numpy as np
 from numpy import testing as nptest
@@ -18,18 +18,17 @@ def example_omni_interval(request):
     dt = datetime.datetime(2006,3,14)
     return omnireader.omni_interval(dt,dt+datetime.timedelta(days=1),cadence)
 
-# def test_omnireader_can_download_txt():
-#     """
-#     Test that we can get to the omni FTP location
-#     for text files and that
-#     we have a sane local directory for storing files
-#     """
-#     dt = datetime.datetime(2005,1,1)
-#     od = omnireader.omni_downloader(cdf_or_txt='txt',force_download=True)
-#     fakecdf = od.get_cdf(dt,'5min')
-#     downloaded_txt = os.path.join(od.localdir,od.filename_gen['5min'](dt))
-#     assert os.path.exists(downloaded_txt)
-
+def test_omnireader_can_download_txt():
+    """
+    Test that we can get to the omni FTP location
+    for text files and that
+    we have a sane local directory for storing files
+    """
+    dt = datetime.datetime(2005,1,1)
+    od = omnireader.omni_downloader(cdf_or_txt='txt',force_download=True)
+    fakecdf = od.get_cdf(dt,'5min')
+    downloaded_txt = os.path.join(od.localdir,od.filename_gen['5min'](dt))
+    assert os.path.exists(downloaded_txt)
 
 @pytest.mark.skipif(pkgutil.find_loader('spacepy') is None,
                     reason="requires spacepy.pycdf, CDF reading library")

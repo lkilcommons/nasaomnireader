@@ -134,11 +134,11 @@ except ImportError:
 # y: CDF_REAL4 [8928]
 # z: CDF_REAL4 [8928]
 # >
-import geospacepy
 from geospacepy import special_datetime
-from geospacepy import omnitxtcdf
 
-localdir = geospacepy.config['omnireader']['local_cdf_dir']
+from nasaomnireader import omnitxtcdf,config
+
+localdir = config['omnireader']['local_cdf_dir']
 
 class omni_txt_cdf_mimic_var(object):
     """

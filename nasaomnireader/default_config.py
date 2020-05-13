@@ -5,7 +5,7 @@ import pkg_resources,os
 #Determine where this module's source file is located
 src_file_dir = os.path.dirname(os.path.realpath(__file__))
 
-appdirs = pkg_resources.appdirs.AppDirs('geospacepy','Liam Kilcommons')
+appdirs = pkg_resources.appdirs.AppDirs('nasaomnireader','cuseda')
 
 data_dir = appdirs.user_data_dir #~/.local/share/AMGeO on Ubuntu
 
