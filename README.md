@@ -19,7 +19,7 @@ If geospacepy-lite does not detect SpacePy on your computer, it will use the NAS
 
 Example code using omnireader:
 ```{python}
-from geospacepy import omnireader
+from nasaomnireader import omnireader
 #Create a time window
 sTimeIMF = datetime.datetime(2010,1,1)
 eTimeIMF = datetime.datetime(2010,1,3)
