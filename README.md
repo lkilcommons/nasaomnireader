@@ -1,6 +1,8 @@
 # nasaomnireader
 Tools for reading NASA OMNIWeb data
 
+[![Build Status](https://travis-ci.org/lkilcommons/nasaomnireader.svg?branch=master)](https://travis-ci.org/lkilcommons/nasaomnireader)
+
 The tools in this packaged used to be part of lkilcommons/geospacepy-lite. As of version 0.2 of geospacepy-lite, nasaomnireader is now it's own package.
 
 If you need fast OMNI data reading I recommend installing:
