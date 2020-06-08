@@ -17,8 +17,9 @@ By default, text files are downloaded and used
 
 The NASA CDF format files will be downloaded if the code finds the following packages on your computer:
 
-#. [The NASA CDF Library](http://cdf.gsfc.nasa.gov/)
-#. [Spacepy](https://pypi.python.org/pypi/SpacePy), for it's pyCDF python interface to the NASA CDF Library
+1. [The NASA CDF Library](http://cdf.gsfc.nasa.gov/)
+
+2. [Spacepy](https://pypi.python.org/pypi/SpacePy), for it's pyCDF python interface to the NASA CDF Library
 
 ### Installation Instructions ###
 
