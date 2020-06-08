@@ -1,18 +1,24 @@
 # nasaomnireader
-Tools for reading NASA OMNIWeb data
+Download, read, and manuipulate [NASA OMNIWeb](https://omniweb.gsfc.nasa.gov) data
 
 [![Build Status](https://travis-ci.org/lkilcommons/nasaomnireader.svg?branch=master)](https://travis-ci.org/lkilcommons/nasaomnireader)
 
 The tools in this packaged used to be part of lkilcommons/geospacepy-lite. As of version 0.2 of geospacepy-lite, nasaomnireader is now it's own package.
 
-If you need fast OMNI data reading I recommend installing:
+### Data Sources ###
 
-1. [The NASA CDF Library](http://cdf.gsfc.nasa.gov/)
+The package automatically downloads data from the NASA OMNIWeb website. It can use data in two formats:
 
-2. [Spacepy](https://pypi.python.org/pypi/SpacePy), for it's pyCDF python interface to the NASA CDF Library
+#### Text ####
 
-If SpacePy is not on your computer, the package will use the NASA OMNIWeb ASCII text files.
+By default, text files are downloaded and used
 
+#### CDF ####
+
+The NASA CDF format files will be downloaded if the code finds the following packages on your computer:
+
+#. [The NASA CDF Library](http://cdf.gsfc.nasa.gov/)
+#. [Spacepy](https://pypi.python.org/pypi/SpacePy), for it's pyCDF python interface to the NASA CDF Library
 
 ### Installation Instructions ###
 
