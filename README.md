@@ -11,8 +11,10 @@ The package automatically downloads data from the NASA OMNIWeb website. It can u
 
 #### Text ####
 
-By default, text files are downloaded and used
+By default, text files are downloaded and used. 
 
+  WARNING: metadata for text files is supplied from dumped CDF file metadata. There is no way to verify that this metadata is valid for the text files.Contributor
+  
 #### CDF ####
 
 The NASA CDF format files will be downloaded if the code finds the following packages on your computer:
