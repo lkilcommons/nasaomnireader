@@ -3,7 +3,6 @@
 import sys, os, copy, textwrap, datetime, subprocess, ftplib, traceback, requests
 import numpy as np
 import matplotlib as mpl
-mpl.use('Agg')
 import matplotlib.pyplot as pp
 import scipy.interpolate as interpolate
 
@@ -17,9 +16,8 @@ except ImportError:
     print(textwrap.dedent("""
         ------------IMPORTANT----------------------------
         Unable to import spacepy. Will fall back to
-        using Omni text files, but I really recommend
-        installing spacepy and using the cdf format. It's
-        faster.
+        using Omni text files, which may have slightly
+        different data and incomplete metadata
         -------------------------------------------------
         """))
     spacepy_is_available = False
@@ -212,10 +210,10 @@ class omni_txt_cdf_mimic_var(object):
         if np.isfinite(fillval):
             probably_fill = np.isclose(vardata,fillval,rtol=0.,atol=1.)
             n_fill,n_total = np.count_nonzero(probably_fill),len(vardata)
-            print('{} NaNd {}/{} (fill was {})'.format(self.name,
-            											n_fill,
-            											n_total,
-            											fillval))
+            # print('{} NaNd {}/{} (fill was {})'.format(self.name,
+            # 											n_fill,
+            # 											n_total,
+            # 											fillval))
             vardata[probably_fill] = np.nan
         return vardata
 
