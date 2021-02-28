@@ -12,7 +12,7 @@ try:
     from spacepy import pycdf
     spacepy_is_available = True
 except ImportError:
-    print(traceback.format_exc())
+    #print(traceback.format_exc())
     print(textwrap.dedent("""
         ------------IMPORTANT----------------------------
         Unable to import spacepy. Will fall back to
