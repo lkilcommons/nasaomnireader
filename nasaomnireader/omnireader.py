@@ -377,7 +377,7 @@ class borovsky(omni_derived_var):
         bt = np.sqrt(by**2+bz**2)
         #Compute IMF clock angle
         ca = np.arctan2(by,bz)
-        borovsky = 3.29e-2*(np.sin(ca/2)**2)*np.sqrt(n)*vsw**2*mach**(-.18)*np.exp(np.sqrt((mach/3.42)))
+        borovsky = 3.29e-2*(np.sin(ca/2)**2)*np.sqrt(n)*vsw**2*mach**(-.18)*np.exp(-1.0*np.sqrt((mach/3.42)))
         self.varvals=borovsky
         return borovsky
 
@@ -403,7 +403,7 @@ class newell(omni_derived_var):
         #Compute IMF clock angle
         ca = np.arctan2(by,bz)
         neg_ca = bt*np.cos(ca)*bz < 0
-        ca[neg_ca] = ca[net_ca] + np.pi
+        ca[neg_ca] = ca[neg_ca] + np.pi
         sin_ca = np.abs(np.sin(ca/2.))
 
         newell = (vsw*1000.)**(4./3)*(bt*1.0e-9)**(2./3)*(sin_ca)**(8./3);
